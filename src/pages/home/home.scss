@@ -10,5 +10,16 @@
       padding: 20px;
       gap: 20px;
     }
+    .listContainer{
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+
+      .listTitle{
+        font-weight: 700;
+        color: gray;
+        margin-bottom: 15px;
+      }
+    }
   }
 }

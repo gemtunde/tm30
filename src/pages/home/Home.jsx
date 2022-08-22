@@ -7,6 +7,7 @@ import './home.scss';
 import Chart from '../../components/charts/Chart';
 import Featured from '../../components/featured/Featured';
 import ProgressChart from '../../components/progress/ProgressBar';
+import Table from '../../components/table/Table';
 
 const Home = () => {
   return (
@@ -24,6 +25,10 @@ const Home = () => {
             <Chart />
             <Featured />
             <ProgressChart />
+        </div>
+        <div className="listContainer">
+            <div className="listTitle"> All Institution Trasactions</div>
+            <Table />
         </div>
     </div>
     </div>

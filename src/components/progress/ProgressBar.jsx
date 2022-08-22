@@ -2,9 +2,11 @@ import React from 'react';
 import './progressbar.scss'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ProgressBar from "@ramonak/react-progress-bar";
-import LightbulbCircleRoundedIcon from '@mui/icons-material/LightbulbCircleRounded';
-import SupervisedUserCircleRoundedIcon from '@mui/icons-material/SupervisedUserCircleRounded';
-import StarsRoundedIcon from '@mui/icons-material/StarsRounded';
+
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+
 
 const ProgressChart = () => {
   return (
@@ -17,7 +19,7 @@ const ProgressChart = () => {
         <div className="admin">
             <div className="admin-wrapper">
                 <div className="super-admin">
-                        <LightbulbCircleRoundedIcon className='admin-icon' />
+                        <AccountBalanceIcon className='admin-icon' />
                         <h3 className="title">Super Admin 1</h3>
                         <p className="description">19 Users</p>
                 </div>
@@ -30,7 +32,7 @@ const ProgressChart = () => {
             </div>
             <div className="admin-wrapper">
                 <div className="super-admin">
-                        <SupervisedUserCircleRoundedIcon className='admin-icon orange' />
+                        <PeopleAltIcon className='admin-icon orange' />
                         <h3 className="title">Super Admin 2</h3>
                         <p className="description">5 Users</p>
                 </div>
@@ -43,9 +45,9 @@ const ProgressChart = () => {
             </div>
             <div className="admin-wrapper">
                 <div className="super-admin">
-                        <StarsRoundedIcon className='admin-icon yellow' />
-                        <h3 className="title">Super Admin 3</h3>
-                        <p className="description">31 Users</p>
+                        <AccountBalanceWalletIcon className='admin-icon yellow' />
+                        <h3 className="title">Bank Admin </h3>
+                        <p className="description">231 Users</p>
                 </div>
                 <div className="bar">
                     <ProgressBar 
