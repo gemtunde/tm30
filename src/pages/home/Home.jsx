@@ -6,6 +6,7 @@ import './home.scss';
 
 import Chart from '../../components/charts/Chart';
 import Featured from '../../components/featured/Featured';
+import ProgressChart from '../../components/progress/ProgressBar';
 
 const Home = () => {
   return (
@@ -20,8 +21,9 @@ const Home = () => {
             <Widget type='users' />
         </div>
         <div className="charts">
-            <Featured />
             <Chart />
+            <Featured />
+            <ProgressChart />
         </div>
     </div>
     </div>

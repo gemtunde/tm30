@@ -1,0 +1,87 @@
+.progressbar{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+     border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+
+    .category{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .title{
+            font-size: 14px;
+        }
+        .icon{
+            color: white;
+            background-color: orange;
+            font-size: 38px;
+            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+               -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+                -moz-box-shadow: 3px 3px 11px 2px rgba(179, 125, 125, 0.75);
+            
+            }
+    }
+    .admin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+            .bar{
+                width: 100%;
+            }
+        .admin-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 5px;
+
+            .super-admin{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 15px;
+
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+                color: grey;
+            }
+            .description{
+                font-size: 12px;
+                font-weight: bold;
+                color: grey;
+            }
+            .admin-icon{
+                color: rgb(24, 31, 151);
+                font-size: 30px;
+               // background-color:rgb(179, 183, 242);
+
+               &.orange{
+                    color: rgb(212, 106, 19);
+               }
+               &.yellow{
+                    color: rgb(206, 189, 7);
+               }
+            }
+        }}
+    }
+}
+.barCompleted1 {
+    background-color: rgb(241, 35, 197);
+    width: 40%;
+    height: 20px;
+}
+.barCompleted2 {
+    background-color: rgb(90, 215, 65);
+    width: 60%;
+    height: 20px;
+}
+.barCompleted3 {
+    background-color: rgb(250, 6, 6);
+    width: 85%;
+    height: 20px;
+}

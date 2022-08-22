@@ -1,5 +1,10 @@
 import React from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
+ //import { CircularProgressbar } from 'react-circular-progressbar';
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren,
+  buildStyles
+} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import './featured.scss';
 
@@ -12,10 +17,33 @@ const Featured = () => {
         </div>
         <div className="bottom">
             <div className="featuredChart">
-                <CircularProgressbar 
+                {/* <CircularProgressbar 
                 value={65} 
                 text={` 65%` } 
-                strokeWidth={10}/>
+                strokeWidth={10}/> */}
+
+                   <CircularProgressbarWithChildren
+        value={55}
+        styles={buildStyles({
+         
+          pathColor: '#610a61',
+          trailColor: "#eee",
+          strokeLinecap: "butt"
+        })}
+      >
+        {/* Foreground path */}
+        <CircularProgressbar
+          value={15}
+          text={` 65%`}          
+          styles={buildStyles({
+           pathColor: '#d34aa1',
+            trailColor: "transparent",
+            strokeLinecap: "butt",
+             textSize: "12px",
+              textColor: "black",
+          })}
+        />       
+      </CircularProgressbarWithChildren>
             </div>
         </div>
         
