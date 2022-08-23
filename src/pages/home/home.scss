@@ -15,10 +15,64 @@
       padding: 20px;
       background-color: white;
 
-      .listTitle{
-        font-weight: 700;
-        color: gray;
-        margin-bottom: 15px;
+      .listTitle{       
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .leftList{
+          font-weight: 700;
+            color: gray;
+            margin-bottom: 15px;
+        }
+        .rightList{
+          width: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          .listFilter{
+            display: flex;
+              align-items: center;
+              justify-content:space-between;
+              width: 40%;
+              
+
+              .filter{
+                display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+                  border: 1px solid blue;
+                    border-radius: 10px;
+                    margin: 5px;
+                    padding: 10px;
+                    cursor: pointer;
+
+                    p{
+                      font-size: 12px;
+                      color: gray;
+                      font-weight: bold;
+                    }
+              }
+          }
+
+          .search {
+              display: flex;
+              align-items: center;
+              padding: 3px;
+              border: 0.5px solid lightgrey;
+          
+              input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+          
+                &::placeholder {
+                  font-size: 12px;
+                }
+              }
+            }
+        }
       }
     }
   }

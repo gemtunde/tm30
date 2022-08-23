@@ -22,6 +22,7 @@
     }
     .center {
         padding-left: 10px;
+        margin-bottom: 100px;
 
         ul{
             list-style-type: none;
@@ -37,7 +38,7 @@
                     color: white;
                 }
                 span{
-                    color: white;
+                    color: white;                    
                 }
             }
 
@@ -45,6 +46,7 @@
                 display: flex;
                 align-items: center;
                 padding: 10px;
+                margin-bottom: 10px;
                 cursor: pointer;
 
                 &:hover{
@@ -57,7 +59,7 @@
                 }
                 span{
                     font-size: 13px;
-                    font-weight: 600;
+                    font-weight:bolder;
                     color: #888;
                 }
                 .logout{
@@ -69,25 +71,45 @@
     .bottom{
         display: flex;
         align-items: center;
-        margin: 10px;
+        justify-content: space-around;
 
-        .colorOption{
-            width: 20px;
-            height: 20px;
-            border-radius: 5px;
-            border: 1px solid #7451f8;
-            cursor: pointer;
-            margin: 5px;
+            .bottom1{
 
-            &:nth-child(1){
-                background-color: whitesmoke;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
             }
-            &:nth-child(2){
-                background-color: #333;
+            .bottom2{
+                .title{
+                    font-size: 14px;
+                    color: black;                    
+                }
+                .description{
+                    font-size: 12px;
+                    color: gray;                    
+                }
             }
-            &:nth-child(3){
-                background-color: darkblue;
-            }
-        }
+
+        // .colorOption{
+        //     width: 20px;
+        //     height: 20px;
+        //     border-radius: 5px;
+        //     border: 1px solid #7451f8;
+        //     cursor: pointer;
+        //     margin: 5px;
+
+        //     // &:nth-child(1){
+        //     //     background-color: whitesmoke;
+        //     // }
+        //     // &:nth-child(2){
+        //     //     background-color: #333;
+        //     // }
+        //     // &:nth-child(3){
+        //     //     background-color: darkblue;
+        //     // }
+        // }
     }
 }

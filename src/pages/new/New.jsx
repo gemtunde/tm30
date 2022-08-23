@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
+import UploadFileIcon from '@mui/icons-material/UploadFile';
 import './new.scss'
 
 const New = () => {
@@ -20,7 +21,35 @@ const New = () => {
                     alt='img'
                   />
             </div>
-          <div className="right">right</div>
+          <div className="right">
+            <form>
+              <div className="formInput">
+                <label>Transaction</label>
+                <input type='text' placeholder='transaction'  />
+              </div>
+              <div className="formInput">
+                <label>Billers</label>
+                <input type='text' placeholder='billers'  />
+              </div>
+              <div className="formInput">
+                <label>Institutions</label>
+                <input type='text' placeholder='institution'  />
+              </div>
+              <div className="formInput">
+                <label>Amount</label>
+                <input type='text' placeholder='amount'  />
+              </div>
+              <div className="formInput">
+                <label>Date</label>
+                <input type='text' placeholder='date'  />
+              </div>
+              <div className="formInput">
+                <label htmlFor='file'> Upload: <UploadFileIcon className='icon' /> </label>
+                <input type='file' id='file' hidden />
+              </div>
+              <button>Send</button>
+            </form>
+          </div>
         </div>
         </div> 
          </div>

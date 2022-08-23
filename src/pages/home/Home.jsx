@@ -4,6 +4,8 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import Widget from '../../components/widget/Widget';
 import './home.scss';
 
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Chart from '../../components/charts/Chart';
 import Featured from '../../components/featured/Featured';
 import ProgressChart from '../../components/progress/ProgressBar';
@@ -27,7 +29,25 @@ const Home = () => {
             <ProgressChart />
         </div>
         <div className="listContainer">
-            <div className="listTitle"> All Institution Trasactions</div>
+            <div className="listTitle"> 
+                 <div className="leftList"> All Institution Transactions</div>
+                 <div className="rightList">
+                        <div className="search">
+                            <input type='text' placeholder='Search for order Id, Billers, Institutions...' />
+                            <SearchOutlinedIcon />
+                        </div>
+                        <div className="listFilter">
+                            <div className="filter">
+                                <p> Filter By Banks </p>
+                                <ArrowDownwardIcon />
+                            </div>
+                            <div className="filter">
+                                <p> Filter By Billers </p>
+                                <ArrowDownwardIcon />
+                            </div>
+                        </div>
+                    </div>            
+                </div>
             <Table />
         </div>
     </div>

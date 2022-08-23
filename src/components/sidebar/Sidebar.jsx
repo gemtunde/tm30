@@ -1,12 +1,13 @@
 import React from 'react';
 import './sidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import SettingsIcon from '@mui/icons-material/Settings';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import ReportIcon from '@mui/icons-material/Report';
 import SummarizeIcon from '@mui/icons-material/Summarize';
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -19,27 +20,11 @@ const Sidebar = () => {
         <ul>
             <li className='dashboard'>
                 <DashboardIcon className='icon' />
-                <span>Dashboard</span> 
+                <span> <Link to='/'> Dashboard</Link></span> 
             </li>
-            <li>
-                <PersonAddAltIcon  className='icon'/>
-                <span>Users</span> 
-            </li>
-            <li>
-                <DashboardIcon  className='icon'/>
-                <span>Orders</span> 
-            </li>
-            <li>
+              <li>
                 <SummarizeIcon  className='icon'/>
-                <span>Stats</span> 
-            </li>
-            <li>
-                <DashboardIcon  className='icon'/>
-                <span>Notifications</span> 
-            </li>
-            <li>
-                <DashboardIcon  className='icon'/>
-                <span>Logs</span> 
+                <span> <Link to='/user/new'>Add New</Link></span> 
             </li>
             <li>
                 <DashboardIcon  className='icon'/>
@@ -50,21 +35,17 @@ const Sidebar = () => {
                 <span>Billers</span> 
             </li>
             <li>
+                <PersonAddAltIcon  className='icon'/>
+                <span><Link to='/user'> Users</Link></span> 
+            </li>
+             <li>
+                <DashboardIcon  className='icon'/>
+                <span><Link to='/user/2'>Transactions </Link></span> 
+            </li>
+            <li>
                 <AssessmentIcon  className='icon'/>
                 <span>Reporting</span> 
-            </li>
-            <li>
-                <DashboardIcon  className='icon'/>
-                <span>Transactions</span> 
-            </li>
-            <li>
-                <SettingsIcon  className='icon'/>
-                <span>Setting</span> 
-            </li>
-            <li>
-                <DashboardIcon  className='icon'/>
-                <span>Profile</span> 
-            </li>
+            </li>            
             <li>
                 <PowerSettingsNewIcon  className='icon'/>
                 <span className='logout'>Logout</span> 
@@ -72,8 +53,17 @@ const Sidebar = () => {
         </ul>
      </div>
      <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="bottom1">
+             <img
+                    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDnBtoJahaHrbvU_9PwuDquYb46Jh0uHf20w&usqp=CAU'
+                    alt='cr7'
+                  />
+        </div>
+        <div className="bottom2">
+            <h2 className="title">Cristiano Ronaldo</h2>
+            <p className="description">Super Admin</p>
+        </div>
+        <ArrowDownwardIcon />
      </div>
         </div>
   )
