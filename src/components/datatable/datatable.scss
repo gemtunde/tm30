@@ -1,0 +1,44 @@
+.datatable{
+    height: 600px;
+    padding: 20px;
+
+    .cellWithStatus{
+        padding: 5px;
+            border-radius: 5px;
+        
+            &.Successful {
+                color: green;
+                background-color: rgba(118, 244, 118, 0.929);
+            }
+        
+            &.Pending {
+                color: goldenrod;
+                background-color: rgba(244, 235, 138, 0.854);
+            }
+        
+            &.Failed {
+                color: red;
+                background-color: rgba(247, 163, 163, 0.904);
+            }
+    }
+    .cellAction{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .viewButton{
+            padding: 2px 5px;
+            border-radius: 5px;
+            color: rgba(60, 0, 255, 0.689);
+            border: 1px dotted rgba(60, 0, 255, 0.689);
+            cursor: pointer;
+        }
+        .deleteButton{
+            padding: 2px 5px;
+            border-radius: 5px;
+            color: rgba(255, 81, 0, 0.995);
+            border: 1px dotted rgba(255, 81, 0, 0.995);
+            cursor: pointer;
+        }
+    }
+}
