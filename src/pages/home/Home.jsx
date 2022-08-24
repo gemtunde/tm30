@@ -16,7 +16,18 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 const Home = () => {
+     const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
+
      const [value, setValue] = React.useState('1');
       const data =[
         {
@@ -84,9 +95,18 @@ const Home = () => {
         },
     ];
 
-    //const 
+    //successful transactions
+    const successData = data.filter(item => item.status === 'Successful');
+    //console.log(successData)
 
-  const handleChange = (event, newValue) => {
+    //pending transactions
+    const pendData = data.filter(item => item.status === 'Pending');
+   
+
+    //failed transactions
+    const failedData = data.filter(item => item.status === 'Failed');
+
+  const handleTabChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -115,28 +135,50 @@ const Home = () => {
                             <SearchOutlinedIcon />
                         </div>
                         <div className="listFilter">
-                            <div className="filter">
-                                <p> Filter By Banks </p>
-                                <ArrowDownwardIcon />
-                            </div>
-                            <div className="filter">
-                                <p> Filter By Billers </p>
-                                <ArrowDownwardIcon />
-                            </div>
+                           <FormControl style={{width:'150px'}}>
+                                <InputLabel id="demo-simple-select-label"> Filter by Banks</InputLabel>
+                                <Select
+                                labelId="demo-simple-select-label"
+                                id="demo-simple-select"
+                                value={age}
+                                label="Age"
+                                onChange={handleChange}
+                                >
+                                    <MenuItem value={10}>GTBank</MenuItem>
+                                    <MenuItem value={20}>UBA</MenuItem>
+                                    <MenuItem value={30}>Access</MenuItem>
+                                </Select>
+                        </FormControl>
+                           <FormControl style={{width:'150px'}}>
+                                <InputLabel id="demo-simple-select-label"> Filter by Billers</InputLabel>
+                                <Select
+                                labelId="demo-simple-select-label"
+                                id="demo-simple-select"
+                                value={age}
+                                label="Age"
+                                onChange={handleChange}
+                                >
+                                    <MenuItem value={10}>WAEC</MenuItem>
+                                    <MenuItem value={20}>PHCN</MenuItem>
+                                    <MenuItem value={30}>TAX</MenuItem>
+                                </Select>
+                        </FormControl>
                         </div>
                     </div>            
                 </div>
                 <TabContext value={value}>
         <div style={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
+          <TabList onChange={handleTabChange} aria-label="lab API tabs example">
             <Tab label="All Transactions" value="1" />
             <Tab label="Successful" value="2" />
             <Tab label="Pending" value="3" />
+            <Tab label="Failed" value="4" />
           </TabList>
         </div>
         <TabPanel value="1"><Table rows={data} /></TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
-        <TabPanel value="3">Item Three</TabPanel>
+        <TabPanel value="2"><Table rows={successData}/> </TabPanel>
+        <TabPanel value="3"><Table rows={pendData} /> </TabPanel>
+        <TabPanel value="4"><Table rows={failedData} /> </TabPanel>
       </TabContext>
             
         </div>
