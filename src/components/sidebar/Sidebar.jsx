@@ -20,11 +20,11 @@ const Sidebar = () => {
         <ul>
             <li className='dashboard'>
                 <DashboardIcon className='icon' />
-                <span> <Link to='/'> Dashboard</Link></span> 
+                <span> <Link to='/' style={{textDecoration:'none'}}> Dashboard</Link></span> 
             </li>
               <li>
                 <SummarizeIcon  className='icon'/>
-                <span> <Link to='/user/new'>Add New</Link></span> 
+                <span> <Link to='/user/new' style={{textDecoration:'none'}}>Add New</Link></span> 
             </li>
             <li>
                 <DashboardIcon  className='icon'/>
@@ -36,11 +36,11 @@ const Sidebar = () => {
             </li>
             <li>
                 <PersonAddAltIcon  className='icon'/>
-                <span><Link to='/user'> Users</Link></span> 
+                <span><Link to='/user' style={{textDecoration:'none'}}> Users</Link></span> 
             </li>
              <li>
                 <DashboardIcon  className='icon'/>
-                <span><Link to='/user/2'>Transactions </Link></span> 
+                <span><Link to='/user/2' style={{textDecoration:'none'}}>Transactions </Link></span> 
             </li>
             <li>
                 <AssessmentIcon  className='icon'/>
@@ -60,7 +60,7 @@ const Sidebar = () => {
                   />
         </div>
         <div className="bottom2">
-            <h2 className="title">Cristiano Ronaldo</h2>
+            <h2 className="title">Mo Salah</h2>
             <p className="description">Super Admin</p>
         </div>
         <ArrowDownwardIcon />

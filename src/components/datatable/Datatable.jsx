@@ -2,8 +2,7 @@ import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 import './datatable.scss'
 import { userColumns, userRows } from '../../datatablesource';
-import { render } from '@testing-library/react';
-
+import { Link } from "react-router-dom";
 // const columns = [
 //   { field: 'id', headerName: 'ID', width: 70 },
 //   { field: 'firstName', headerName: 'First name', width: 130 },
@@ -48,7 +47,10 @@ const Datatable = () => {
     renderCell : ()=>{
       return(
         <div className='cellAction'>
-            <div className="viewButton">View</div>
+            <div className="viewButton">
+              <Link to='/user/2' style={{textDecoration:'none'}}>View</Link>
+             
+              </div>
             <div className="deleteButton">Delete</div>
         </div>
       );
@@ -57,6 +59,10 @@ const Datatable = () => {
   ]
   return (
     <div className='datatable'>
+      <div className="Datatitle">
+        Latest Transactions
+        <Link to='/user/new' className='link'>Add New  </Link>
+      </div>
         <DataGrid
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
