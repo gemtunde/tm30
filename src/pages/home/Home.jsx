@@ -21,6 +21,10 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputAdornment from '@mui/material/InputAdornment';
+
 const Home = () => {
      const [age, setAge] = React.useState('');
 
@@ -130,10 +134,18 @@ const Home = () => {
             <div className="listTitle"> 
                  <div className="leftList"> All Institution Transactions</div>
                  <div className="rightList">
-                        <div className="search">
+                        {/* <div className="search">
                             <input type='text' placeholder='Search for order Id, Billers, Institutions...' />
                             <SearchOutlinedIcon />
-                        </div>
+                        </div> */}
+                         <FormControl style={{width:'350px'}}>
+                            <InputLabel htmlFor="outlined-adornment-amount">Search </InputLabel>
+                            <OutlinedInput
+                                id="outlined-adornment-amount"
+                                startAdornment={<InputAdornment position="start"><SearchOutlinedIcon /></InputAdornment>}
+                                label="Search"
+                            />
+                        </FormControl>
                         <div className="listFilter">
                            <FormControl style={{width:'150px'}}>
                                 <InputLabel id="demo-simple-select-label"> Filter by Banks</InputLabel>
