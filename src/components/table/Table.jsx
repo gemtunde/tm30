@@ -9,6 +9,7 @@ import Paper from '@mui/material/Paper';
 import './table.scss'
 
 const ListTable = ({rows}) => {
+  
    
   return (
     <TableContainer component={Paper} className='table'>

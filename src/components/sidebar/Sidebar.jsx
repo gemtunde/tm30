@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
      <div className="top">
-        <span className="logo"> tm30</span>
+        <span className="logo"> gemtunde</span>
      </div>
         <hr />
      <div className="center">
