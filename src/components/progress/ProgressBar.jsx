@@ -59,7 +59,9 @@ const ProgressChart = () => {
             </div>
             
          </div>
-       
+         <div className="category">
+            <h3>View all</h3>            
+        </div>
     </div>
   )
 }
